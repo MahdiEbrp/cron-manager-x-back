@@ -1,5 +1,20 @@
 <?php
 add_action('admin_enqueue_scripts', '___cron_manager_x_dependency');
+/**
+* Enqueue the JavaScript and CSS files for the Cron Manager X page.
+*
+* This function determines the directory path where the assets are located,
+* and then enqueues the 'index.js' file as a script and the 'index.css' file
+* as a style for the Cron Manager X page.
+*
+* The script is enqueued with a version number of '1.0.0' and set to load
+* in the footer.
+*
+* The style is enqueued with a version number of '1.0.0' and set to load
+* for all media types.
+*
+* @return void
+*/
 function ___cron_manager_x_dependency()
 {
     $screen = get_current_screen();
